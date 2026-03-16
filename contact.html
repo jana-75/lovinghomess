@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>التواصل | Loving Homes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Loving Homes - مركز إقامة ورعاية للكلاب: غرف مريحة، أنشطة يومية، رعاية بيطرية، وحزم متنوعة." />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Loader (فكرة مستوحاة) -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="paw">🐾</div>
+      <div class="muted">جاري التحميل...</div>
+    </div>
+  </div>
+
+  <!-- Moving background layer -->
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">تخطي إلى المحتوى</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loving Homes">
+        <span class="brand-badge">🐾</span>
+        <span class="brand-text">
+          <strong>Loving Homes</strong>
+          <small class="muted">لوفينغ هومز</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" class="">الرئيسية</a>
+<a href="about.html" class="">عنّا</a>
+<a href="rooms.html" class="">الغرف</a>
+<a href="activities.html">الأنشطة</a>
+        <a href="training.html">التدريب</a>
+        <a href="services.html" class="">الخدمات</a>
+<a href="packages.html" class="">الحزم</a>
+<a href="testimonials.html" class="">الآراء</a>
+<a href="faq.html" class="">الأسئلة</a>
+<a href="contact.html" class="active">التواصل</a>
+      </nav>
+
+      <div class="actions" aria-label="إعدادات العرض">
+        <button class="icon" id="decreaseFont" title="تصغير الخط" aria-label="تصغير الخط">A−</button>
+        <button class="icon" id="increaseFont" title="تكبير الخط" aria-label="تكبير الخط">A+</button>
+        <button class="icon" id="toggleTheme" title="الوضع الداكن" aria-label="الوضع الداكن" aria-pressed="false">🌙</button>
+        <button class="icon" id="ttsPlay" title="قراءة النص" aria-label="قراءة النص">🔊</button>
+        <button class="icon" id="ttsStop" title="إيقاف القراءة" aria-label="إيقاف القراءة">⏹️</button>
+        <button class="icon" id="openPanel" title="تخصيص المظهر" aria-label="تخصيص المظهر">🎨</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+
+    <!-- Theme panel (فكرة مستوحاة) -->
+    <aside class="panel" id="panel" aria-label="لوحة تخصيص المظهر" aria-hidden="true">
+      <div class="panel-head">
+        <strong>تخصيص المظهر</strong>
+        <button class="icon" id="closePanel" aria-label="إغلاق">✕</button>
+      </div>
+      <div class="panel-body">
+        <p class="muted">اختاري لون التمييز. سيتم حفظه تلقائياً.</p>
+        <div class="swatches" role="list">
+          <button class="swatch" data-accent="sky" aria-label="أزرق سماوي"></button>
+          <button class="swatch" data-accent="emerald" aria-label="أخضر"></button>
+          <button class="swatch" data-accent="violet" aria-label="بنفسجي"></button>
+          <button class="swatch" data-accent="rose" aria-label="وردي"></button>
+          <button class="swatch" data-accent="amber" aria-label="كهرماني"></button>
+        </div>
+        <div class="panel-row">
+          <span>حركة الخلفية</span>
+          <label class="switch">
+            <input type="checkbox" id="motionToggle" checked>
+            <span class="slider" aria-hidden="true"></span>
+          </label>
+        </div>
+        <p class="muted tiny">ملاحظة: الموقع يعمل على الجوال والكمبيوتر مع ميزات وصول أساسية.</p>
+      </div>
+    </aside>
+  </header>
+
+  <main id="main" class="main">
+    
+<section class="container page-hero">
+  <h1>التواصل والحجز</h1>
+  <p class="muted">اتركي بياناتك وسنرد عليك بأقرب وقت.</p>
+</section>
+
+<div class="container section-divider" aria-hidden="true"></div>
+
+<section class="container section side">
+  <div class="side-media">
+    <img src="images/contact.webp" alt="التواصل والحجز" />
+  </div>
+  <div class="side-text">
+    <form class="form" id="contactForm">
+      <div class="grid2">
+        <div>
+          <label>الاسم</label>
+          <input required type="text" name="name" placeholder="اسمك" />
+        </div>
+        <div>
+          <label>رقم الهاتف</label>
+          <input required type="tel" name="phone" placeholder="07XXXXXXXX" />
+        </div>
+      </div>
+      <label>الحزمة</label>
+      <select name="package" required>
+        <option value="">— اختاري —</option>
+        <option>المميزة</option>
+        <option>الكلاسيكية</option>
+        <option>اليوم</option>
+        <option>حزمة مخصصة</option>
+      </select>
+      <label>ملاحظات</label>
+      <textarea name="notes" rows="4" placeholder="حساسية/أدوية/متطلبات إضافية..."></textarea>
+      <button class="btn primary" type="submit">إرسال</button>
+      <p class="muted tiny">نموذج تجريبي — جاهز للربط لاحقاً.</p>
+    </form>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Loving Homes</strong>
+        <p class="muted">بيئة آمنة ومريحة للكلاب مع رعاية متكاملة.</p>
+      </div>
+      <div class="footer-links">
+        <a href="packages.html">الحزم</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html">الحجز</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="muted">© 2026 Loving Homes</span>
+    </div>
+  </footer>
+
+  <button class="top" id="topBtn" aria-label="الرجوع للأعلى">⬆</button>
+
+  <script src="js/main.js"></script>
+<a href="index.html" class="home-btn">🏠</a>
+</body>
+</html>

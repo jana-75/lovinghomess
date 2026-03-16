@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>الرئيسية | Loving Homes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Loving Homes - مركز إقامة ورعاية للكلاب: غرف مريحة، أنشطة يومية، رعاية بيطرية، وحزم متنوعة." />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        /* تنسيق قسم الفيديو لضمان ظهوره بشكل احترافي */
+        
+        .video-section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .video-container {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: #000;
+            line-height: 0;
+            /* يمنع الفراغات تحت الفيديو */
+        }
+        
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 25px;
+        }
+        
+        .video-title {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: var(--primary-color, #333);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-card">
+            <div class="paw">🐾</div>
+            <div class="muted">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <div class="bg-layer" aria-hidden="true"></div>
+    <a class="skip" href="#main">تخطي إلى المحتوى</a>
+
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Loving Homes">
+                <span class="brand-badge">🐾</span>
+                <span class="brand-text">
+          <strong>Loving Homes</strong>
+          <small class="muted">لوفينغ هومز</small>
+        </span>
+            </a>
+
+            <nav class="nav" aria-label="التنقل الرئيسي">
+                <a href="index.html" class="active">الرئيسية</a>
+                <a href="about.html">عنّا</a>
+                <a href="rooms.html">الغرف</a>
+                <a href="activities.html">الأنشطة</a>
+                <a href="training.html">التدريب</a>
+                <a href="services.html">الخدمات</a>
+                <a href="packages.html">الحزم</a>
+                <a href="testimonials.html">الآراء</a>
+                <a href="faq.html">الأسئلة</a>
+                <a href="contact.html">التواصل</a>
+            </nav>
+
+            <div class="actions" aria-label="إعدادات العرض">
+                <button class="icon" id="decreaseFont" title="تصغير الخط">A−</button>
+                <button class="icon" id="increaseFont" title="تكبير الخط">A+</button>
+                <button class="icon" id="toggleTheme" title="الوضع الداكن">🌙</button>
+                <button class="icon" id="ttsPlay" title="قراءة النص">🔊</button>
+                <button class="icon" id="ttsStop" title="إيقاف القراءة">⏹️</button>
+                <button class="icon" id="openPanel" title="تخصيص المظهر">🎨</button>
+            </div>
+
+            <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+        </div>
+
+        <aside class="panel" id="panel" aria-label="لوحة تخصيص المظهر" aria-hidden="true">
+            <div class="panel-head">
+                <strong>تخصيص المظهر</strong>
+                <button class="icon" id="closePanel" aria-label="إغلاق">✕</button>
+            </div>
+            <div class="panel-body">
+                <p class="muted">اختاري لون التمييز. سيتم حفظه تلقائياً.</p>
+                <div class="swatches" role="list">
+                    <button class="swatch" data-accent="sky" aria-label="أزرق سماوي"></button>
+                    <button class="swatch" data-accent="emerald" aria-label="أخضر"></button>
+                    <button class="swatch" data-accent="violet" aria-label="بنفسجي"></button>
+                    <button class="swatch" data-accent="rose" aria-label="وردي"></button>
+                    <button class="swatch" data-accent="amber" aria-label="كهرماني"></button>
+                </div>
+                <div class="panel-row">
+                    <span>حركة الخلفية</span>
+                    <label class="switch">
+            <input type="checkbox" id="motionToggle" checked>
+            <span class="slider" aria-hidden="true"></span>
+          </label>
+                </div>
+            </div>
+        </aside>
+    </header>
+
+    <main id="main">
+
+        <section class="hero-home">
+            <div class="hero-content">
+                <h1>مرحباً بكم في Loving Homes</h1>
+                <p>أفضل فندق لرعاية الكلاب مع غرف مريحة وأنشطة يومية ورعاية بيطرية 24 ساعة.</p>
+                <a href="#services" class="start-btn">ابدأ الآن</a>
+                <div class="scroll-indicator" aria-hidden="true">⬇</div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2 class="video-title">شاهدوا مرافقنا الرائعة 🎥</h2>
+            <div class="video-container">
+                <video id="janaVideo" autoplay muted loop playsinline controls preload="auto">
+          <source src="videos/jana45.mp4" type="video/mp4">
+          عذراً، متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+            </div>
+        </section>
+
+        <section id="services" class="container section">
+            <h2>خدماتنا</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>غرف مريحة</h3>
+                    <p class="muted">غرف مجهزة بتدفئة وتبريد تحت الأرضية مع تلفزيون لراحة الكلاب.</p>
+                </div>
+                <div class="card">
+                    <h3>منتجع وحلاقة</h3>
+                    <p class="muted">جلسات تنظيف وحلاقة للحفاظ على صحة وجمال الكلب.</p>
+                </div>
+                <div class="card">
+                    <h3>أنشطة يومية</h3>
+                    <p class="muted">المشي في الخارج واللعب ومسار رشاقة لتحفيز النشاط.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section">
+            <h2>لماذا Loving Homes ؟</h2>
+            <p class="muted">
+                نقدم بيئة آمنة ومريحة للحيوانات الأليفة مع رعاية بيطرية على مدار الساعة وتحديثات يومية لأصحاب الحيوانات.
+            </p>
+        </section>
+
+    </main>
+<button class="top" id="topBtn" aria-label="الرجوع للأعلى">⬆</button>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Loving Homes</strong>
+                <p class="muted">بيئة آمنة ومريحة للكلاب مع رعاية متكاملة.</p>
+            </div>
+            <div class="footer-links">
+                <a href="packages.html">الحزم</a>
+                <a href="services.html">الخدمات</a>
+                <a href="contact.html">الحجز</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span class="muted">© 2026 Loving Homes</span>
+        </div>
+    </footer>
+
+    <button class="top" id="topBtn" aria-label="الرجوع للأعلى">⬆</button>
+
+    <script>
+        const v = document.getElementById('janaVideo');
+
+        // محاولة التشغيل فور التحميل
+        window.addEventListener('load', () => {
+            v.play().catch(() => {
+                console.log("المتصفح منع التشغيل التلقائي، بانتظار تفاعل المستخدم...");
+            });
+        });
+
+        // إذا لم يعمل، سيتم تشغيله فوراً عند أول لمسة أو ضغطة للمستخدم في الصفحة
+        document.body.addEventListener('click', () => {
+            if (v.paused) {
+                v.play();
+            }
+        }, {
+            once: true
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+    <a href="index.html" class="home-btn">🏠</a>
+</body>
+
+</html>

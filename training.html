@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>التدريب | Loving Homes</title>
+  <meta name="description" content="Loving Homes - مركز إقامة ورعاية للكلاب: غرف مريحة، أنشطة يومية، رعاية بيطرية، وحزم متنوعة." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="paw">🐾</div>
+      <div class="muted">جاري التحميل...</div>
+    </div>
+  </div>
+
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">تخطي إلى المحتوى</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loving Homes">
+        <span class="brand-badge">🐾</span>
+        <span class="brand-text">
+          <strong>Loving Homes</strong>
+          <small class="muted">لوفينغ هومز</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" class="">الرئيسية</a>
+        <a href="about.html" class="">عنّا</a>
+        <a href="rooms.html" class="">الغرف</a>
+        <a href="services.html" class="">الخدمات</a>
+        <a href="packages.html" class="">الحزم</a>
+        <a href="activities.html" class="">الأنشطة</a>
+        <a href="training.html" class="active">التدريب</a>
+        <a href="testimonials.html" class="">الآراء</a>
+        <a href="faq.html" class="">الأسئلة</a>
+        <a href="contact.html" class="">التواصل</a>
+      </nav>
+
+      <div class="actions" aria-label="إعدادات العرض">
+        <button class="icon" id="decreaseFont" title="تصغير الخط" aria-label="تصغير الخط">A−</button>
+        <button class="icon" id="increaseFont" title="تكبير الخط" aria-label="تكبير الخط">A+</button>
+        <button class="icon" id="toggleTheme" title="الوضع الداكن" aria-label="الوضع الداكن" aria-pressed="false">🌙</button>
+        <button class="icon" id="ttsPlay" title="قراءة النص" aria-label="قراءة النص">🔊</button>
+        <button class="icon" id="ttsStop" title="إيقاف القراءة" aria-label="إيقاف القراءة">⏹️</button>
+        <button class="icon" id="openPanel" title="تخصيص المظهر" aria-label="تخصيص المظهر">🎨</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+
+    <aside class="panel" id="panel" aria-label="لوحة تخصيص المظهر" aria-hidden="true">
+      <div class="panel-head">
+        <strong>تخصيص المظهر</strong>
+        <button class="icon" id="closePanel" aria-label="إغلاق">✕</button>
+      </div>
+      <div class="panel-body">
+        <p class="muted">اختاري لون التمييز. سيتم حفظه تلقائياً.</p>
+        <div class="swatches" role="list">
+          <button class="swatch" data-accent="sky" aria-label="أزرق سماوي"></button>
+          <button class="swatch" data-accent="emerald" aria-label="أخضر"></button>
+          <button class="swatch" data-accent="violet" aria-label="بنفسجي"></button>
+          <button class="swatch" data-accent="rose" aria-label="وردي"></button>
+          <button class="swatch" data-accent="amber" aria-label="كهرماني"></button>
+        </div>
+        <div class="panel-row">
+          <span>حركة الخلفية</span>
+          <label class="switch">
+            <input type="checkbox" id="motionToggle" checked>
+            <span class="slider" aria-hidden="true"></span>
+          </label>
+        </div>
+        <p class="muted tiny">ملاحظة: يمكن إيقاف الحركة لتحسين التركيز أو توفير البطارية.</p>
+      </div>
+    </aside>
+  </header>
+
+  <main id="main" class="main">
+
+  <section class="container page-hero">
+    <h1>التدريب</h1>
+    <p class="muted">جلسات تدريب لطيفة لتعزيز الطاعة والسلوك — ويمكن دمجها مع الإقامة حسب الطلب.</p>
+  </section>
+  
+  <section class="container section side reverse">
+    <div class="side-media">
+      <img src="images/rooms.jpg" alt="تدريب الكلاب" />
+    </div>
+    <div class="side-text">
+      <h2>برامج تدريب مرنة</h2>
+      <div class="cards two">
+        <article class="card">
+          <div class="card-icon">✅</div>
+          <h3>تدريب الطاعة</h3>
+          <p class="muted">الأوامر الأساسية: اجلس، تعال، ابقَ.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🧩</div>
+          <h3>تدريب تفاعلي</h3>
+          <p class="muted">تمارين قصيرة لزيادة التركيز.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🫶</div>
+          <h3>سلوكيات هادئة</h3>
+          <p class="muted">تقليل القلق وزيادة الاطمئنان.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📌</div>
+          <h3>خطة بسيطة</h3>
+          <p class="muted">نرسل لك ملخصًا لتتابع التدريب بالمنزل.</p>
+        </article>
+      </div>
+      <div class="notice">
+        <strong>مهم:</strong> <span class="muted">التدريب ليس بديلاً عن العلاج البيطري عند الحاجة.</span>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Loving Homes</strong>
+        <p class="muted">بيئة آمنة ومريحة للكلاب مع رعاية متكاملة.</p>
+      </div>
+      <div class="footer-links">
+        <a href="packages.html">الحزم</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html">الحجز</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="muted">© 2026 Loving Homes</span>
+    </div>
+  </footer>
+
+  <button class="top" id="topBtn" aria-label="الرجوع للأعلى">⬆</button>
+
+  <script src="js/main.js"></script>
+<a href="index.html" class="home-btn">🏠</a>
+</body>
+</html>
